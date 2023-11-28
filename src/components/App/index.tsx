@@ -1,4 +1,4 @@
-import BottomPanel from '../BottomPanel';
+import TopPanel from '../TopPanel';
 import { ErrorAlert } from '../ErrorAlert';
 import { Identity } from '../Identity';
 import InfoModal from '../InfoModal';
@@ -8,9 +8,8 @@ const App = () => {
   return (
     <>
       <Map></Map>
-      <BottomPanel></BottomPanel>
+      <TopPanel></TopPanel>
       <ErrorAlert></ErrorAlert>
-      <Identity></Identity>
       <InfoModal></InfoModal>
     </>
   );

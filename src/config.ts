@@ -1,8 +1,8 @@
 export const mapConfig = {
-  'web-map-id': '99f098808fc048bb89f89695106800aa'
+  'web-map-id': '06f362a010dc4c3d98025df2dde3370c'
 };
 
-export const portalUrl = 'https://geoxc.maps.arcgis.com';
+export const portalUrl = 'https://geoxc-demox.maps.arcgis.com';
 
 export const applicationTitle = 'ArcGIS Web Template';
 

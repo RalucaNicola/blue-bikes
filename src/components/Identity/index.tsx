@@ -15,27 +15,29 @@ export const Identity = () => {
   const [open, setOpen] = useState(false);
   const dispatch = useAppDispatch();
   const { signedIn, userName, fullName, thumbnailUrl } = useAppSelector((state) => state.authentication);
-
   const toggleIdentityMenu = () => {
     setOpen(!open);
   };
 
   return (
-    <div className={styles.identity}>
+    <div>
       {!signedIn ? (
         <CalciteButton appearance='solid' kind='neutral' onClick={() => dispatch(signIn())}>
           Sign in
         </CalciteButton>
       ) : (
-        <MotionAvatar
-          whileHover={{ scale: 1.2, z: 0, transition: { type: 'spring', duration: 0.8 } }}
-          className={styles.avatar}
-          fullName={fullName}
-          username={userName}
-          thumbnail={thumbnailUrl}
-          scale='m'
-          onClick={toggleIdentityMenu}
-        ></MotionAvatar>
+        <div className={styles.identity}>
+          <span>Hi, {fullName.split(' ')[0]}!</span>
+          <MotionAvatar
+            whileHover={{ scale: 1.2, z: 0, transition: { type: 'spring', duration: 0.8 } }}
+            className={styles.avatar}
+            fullName={fullName}
+            username={userName}
+            thumbnail={thumbnailUrl}
+            scale='m'
+            onClick={toggleIdentityMenu}
+          ></MotionAvatar>
+        </div>
       )}
       {open && signedIn && (
         <motion.div className={styles.identityMenu}>

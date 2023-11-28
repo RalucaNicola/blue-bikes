@@ -1,7 +1,10 @@
 .identity {
-  position: absolute;
-  top: var(--margin);
-  right: var(--margin);
+  display: flex;
+  align-items: center;
+}
+
+.identity span {
+  margin-right: var(--margin);
 }
 
 .avatar {
@@ -10,7 +13,10 @@
 }
 
 .identityMenu {
-  composes: background from '../../utils/utils.module.css';
+  position: absolute;
+  top: 40px;
+  right: var(--margin);
+  background: var(--background-color);
   clear: both;
   margin-top: 40px;
   border-radius: var(--border-radius);
